@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>신규상품등록</title>
+    <style>
+        /* 시멘틱 태그 */
+        main {
+            width: 1200px;
+            justify-items: center;
+        }
+        section.top {
+            display: flex;
+            /* background-color: pink; */
+            width: 1200px;
+            height: 450px;
+        }
+        section.bottom {
+            display: flex;
+            /* background-color: antiquewhite; */
+            width: 1200px;
+            height: 400px;
+            justify-content: center;
+            align-items: center;
+        }
+        article {
+            display: flex;
+            margin: 5px;
+            position: relative;
+            /* background-color: aqua; */
+            width: 40%;
+            height: 450px;
+            justify-content: right;
+            align-items: center;
+        }
+        aside {
+            display: flex;
+            margin: 5px;
+            position: relative;
+            /* background-color: lightyellow; */
+            width: 60%;
+            height: 450px;
+            justify-content: left;
+        }
+
+        /* 좌상단 배치 */
+        /* 1. 좌상단 1차 div */
+        article>div {
+            display: flex;
+            /* 아래 방향으로 컨텐츠 정렬했기 때문에 justify-content: center 하면 수직 정렬됨 */
+            flex-direction: column;
+            margin: 5px;
+            /* background-color: lightgreen; */
+            width: 70%;
+            height: 90%;
+            justify-content: center; 
+            align-items: center;
+        }
+        /* 2. 좌상단 이미지 넣는 회색 영역 */
+        article>div>div {
+            display: flex;
+            background-color: lightgray;
+            border-radius: 5px;
+            /* text-align: center; */
+            width: 80%;
+            height: 70%;
+            min-height: 200px;
+            min-width: 200px;
+            /* 좌우 가운데 정렬 */
+            justify-content: center; 
+            /* display가 flex일 경우는 align-items를 이용해서 가운데 정렬 */
+            /* 상하 가운데 정렬 */
+            align-items: center;
+            justify-items: center;
+            align-content: center;
+
+
+        }
+        /* 3. 좌상단 이미지 이동 바(테이블) */
+        article>div>table {
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            vertical-align: middle;
+            color: red;
+        }
+        
+        article table{
+            margin-top: 8px;
+        }
+
+        article table td{
+            background-color: lightgray;
+            width: 25px;
+            height: 25px;
+            color: black;
+            text-align: center;
+            vertical-align: center;
+            border-radius: 5px;
+        }
+
+        article table td.bar {
+            background-color: rgb(99, 193, 224);
+        }
+
+        article table td.selected {
+            background-color: darkgray;
+        }
+
+        article table td:hover {
+            transform: scale(1.1);
+        }
+
+        /* 우상단 배치 */
+        /* 1. 우상단 1차 div */
+        aside>div {
+            margin: 5px;
+            /* background: lightsalmon; */
+            width: 80%;
+        }
+        
+        /* 2. 테이블 속성 */
+
+        
+        /* 3. tr / td 속성 */
+        aside table {
+            border-top: 2px solid darkgray;
+            border-bottom: 2px solid darkgray;
+            border-collapse: collapse;
+        }
+
+        td.namecontent {
+            background-color: lightgray;
+            margin: 0px;
+        }
+
+        aside td {
+            width: 100px;
+            padding: 10px;
+        }
+
+        td.inputcontent {
+            padding-left: 20px;
+            width: 280px;
+            height: 25px;
+            margin: 10px;
+            padding: 10px;
+        }
+        td>input {
+            width: 280px;
+            height: 18px;
+            border-radius: 5px;
+            border: 1px solid lightgray;
+            outline: 0;
+        }
+
+        td>div {
+            display: flex;
+            justify-content: center;
+        }
+
+        td>div>div {
+            width: 8%;
+            min-width: 20px;
+        }
+
+        td>div>button.opt1 {
+            display: flex;
+            width: 45%;
+            height: 100%;
+            min-width: 85px;
+            min-height: 25px;
+            border-radius: 5px;
+            justify-content: center;
+            align-items: center;
+            padding: 3px;
+            /* text-align, vertical-align 안먹음 */
+            background-color: lightgray;
+            border: none;
+        }
+        td>div>button.opt1:hover {
+            transform: scale(1.1);
+        }
+
+        td>div>button.opt2 {
+            display: flex;
+            width: 45%;
+            height: 100%;
+            min-width: 85px;
+            min-height: 25px;
+            border-radius: 5px;
+            justify-content: center;
+            align-items: center;
+            padding: 3px;
+            /* text-align, vertical-align 안먹음 */
+            background-color: rgb(99, 193, 224);
+            border: none;
+        }
+        td>div>button.opt2:hover {
+            transform: scale(1.1);
+        }
+
+        /* 4. 하단 상세 내용 기입란 */
+        section.bottom>div {
+            display: flex;
+            flex-direction: column;
+            width: 820px;
+            height: 350px;
+            background-color: lightgray;
+            border-radius: 5px;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        section.bottom>div>textarea {
+            width: 740px;
+            height: 270px;
+            border-radius: 5px;
+            resize: none;
+            outline: none;
+            font-size: 16px;
+            font-family: 'NanumGothic';
+        }
+
+    </style>
+</head>
+<body>
+    <main>
+        <h3>상품등록</h3>
+        <hr>
+        <!-- 상단 내용 입력 -->
+        <section class="top">
+            <!-- section -->
+            <!-- 1. 좌상단 이미지 -->
+            <article style="margin-left: 60px">
+                <!-- article -->
+                <div>
+                    <!-- div -->
+                    <div>
+                        <!-- div>div -->
+                        <form action="" method="post" enctype="multipart/form-data">
+                            <input type="file" id="fileUpload" accept='image/*'>
+                            <img id="previewImg" width="200px" height="200px">
+                        </form>
+                    </div>
+                    <table>
+                        <tr>
+                            <td class="bar"><</td>
+                            <td class="selected">1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>5</td>
+                            <td class="bar">></td>
+                        </tr>
+                    </table>
+                </div>
+            </article>
+
+            <!-- 2. 우상단 정보 기입란 -->
+            <aside>
+                <!-- aside -->
+                <div>
+                    <!-- div -->
+                    <table style="margin: 10px; margin-left: 30px;">
+                        <tr>
+                            <td class="namecontent">제목</td>
+                            <td class="inputcontent"><input type="text"></td>
+                        </tr>
+                        <tr>
+                            <td class="namecontent">상품명</td>
+                            <td class="inputcontent"><input type="text"></td>
+                        </tr>
+                        <tr>
+                            <td class="namecontent">카테고리</td>
+                            <td class="inputcontent"><input type="text"></td>
+                        </tr>
+                        <tr>
+                            <td class="namecontent">수량</td>
+                            <td class="inputcontent"><input type="text"></td>
+                        </tr>
+                        <tr>
+                            <td class="namecontent">시작가</td>
+                            <td class="inputcontent"><input type="text"></td>
+                        </tr>
+                        <tr>
+                            <td class="namecontent">즉시 구매가</td>
+                            <td class="inputcontent"><input type="text"></td>
+                        </tr>
+                        <tr>
+                            <td class="namecontent">경매방식</td>
+                            <td class="inputcontent">
+                                <div>
+                                    <button class="opt1">기한입찰</button>
+                                    <div></div>
+                                    <button class="opt2">xx입찰</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="namecontent">경매기간</td>
+                            <td class="inputcontent"><input type="text"></td>
+                        </tr>
+                        <tr>
+                            <td class="namecontent">배송방식</td>
+                            <td class="inputcontent"><input type="text"></td>
+                        </tr>
+                    </table>
+                </div>
+            </aside>
+
+            <script>
+                const fileInput = document.getElementById("fileUpload");
+
+                const handleFiles = (e) => {
+                const selectedFile = [...fileInput.files];
+                const fileReader = new FileReader();
+
+                fileReader.readAsDataURL(selectedFile[0]);
+
+                fileReader.onload = function () {
+                    document.getElementById("previewImg").src = fileReader.result;
+                };
+                };
+
+                fileInput.addEventListener("change", handleFiles);
+            </script>
+
+
+        </section>
+
+        <!-- 하단 세부 내용 입력 -->
+        <section class="bottom">
+            <!-- 1. 회색 박스 -->
+            <div>
+                <p>상세 내용 기입</p>
+                <!-- 2. 흰색 내용 입력란 -->
+                <textarea>
+
+                </textarea>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

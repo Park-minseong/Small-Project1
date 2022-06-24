@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>상품등록메인</title>
+    <style>
+        body {
+            font-family: 'nanumGothic';
+            font-size: 11pt;
+
+        }
+        button.registerNewItem {
+            color: white;
+            background-color: rgb(99, 193, 224);
+            border-radius: 10px;
+            margin: 10px;
+            padding: 10px;
+            border: none;
+            left: 90%;
+
+        }
+
+        table {
+            border-top: 1.5px solid gray;
+            border-bottom: 1.5px solid gray;
+            text-align: center;
+            border-collapse: collapse;
+        }
+
+        td {
+            border-top: 1.5px solid gray;
+            /* border-bottom: 1.5px solid gray; */
+        }
+
+        th {
+            width: 150px;
+            height: 50px;
+        }
+
+        .large {
+            text-align: left;
+            width: 400px;
+            height: 80px;
+        }
+
+        .medium {
+            width: 200px;
+            height: 80px;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        li {
+            position: relative;
+            display: inline-block;
+            background-color: rgb(235, 235, 235);
+            width: 30px;
+            height: 30px;
+            border-radius: 5px;
+            text-align: center;
+            /* 적용이 안됨 ㅠㅠ */
+            vertical-align: middle; 
+            color: black;
+            margin: 1.5px;
+            left: 35%;
+            padding-top: 5px;
+            padding-bottom: 1px;
+        }
+
+        li.selected {
+            background-color: rgb(99, 193, 224);
+            color: white;
+        }
+
+        .ongoing {
+            color: rgba(202,45,44,255);
+            font-weight: 550;
+        }
+        
+        .completed {
+            color: rgba(28,70,196,255);
+            font-weight: 550;
+
+        }
+    </style>
+</head>
+<body>
+    <h3>상품등록</h3>
+    <button type="button" class="registerNewItem">+ 신규상품등록</button>
+    <br>
+    <table>
+        <tr>
+            <th height="50"></th>
+            <th height="50">이미지</th>
+            <th height="50">상품명</th>
+            <th height="50" class="large">제목</th>
+            <th height="50">수량</th>
+            <th height="50">시작가</th>
+            <th height="50">경매방식</th>
+            <th height="50" class="medium">등록일</th>
+            <th height="50">상태</th>
+            <th height="50"></th>
+        </tr>
+        <tr>
+            <td><a><img src=""></a></td>
+            <td><a><img src=""></a></td>
+            <td>상품명1</td>
+            <td class="large">제목1</td>
+            <td>1</td>
+            <td>500</td>
+            <td>기한입찰</td>
+            <td class="medium">2022 / 05 / 26</td>
+            <td class="ongoing">입찰중</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><a><img src=""></a></td>
+            <td><a><img src=""></a></td>
+            <td>상품명1</td>
+            <td class="large">제목1</td>
+            <td>1</td>
+            <td>500</td>
+            <td>기한입찰</td>
+            <td class="medium">2022 / 05 / 26</td>
+            <td class="completed">입찰완료</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><a><img src=""></a></td>
+            <td><a><img src=""></a></td>
+            <td>상품명1</td>
+            <td class="large">제목1</td>
+            <td>1</td>
+            <td>500</td>
+            <td>기한입찰</td>
+            <td class="medium">2022 / 05 / 26</td>
+            <td>종료</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><a><img src=""></a></td>
+            <td><a><img src=""></a></td>
+            <td>상품명1</td>
+            <td class="large">제목1</td>
+            <td>1</td>
+            <td>500</td>
+            <td>기한입찰</td>
+            <td class="medium">2022 / 05 / 26</td>
+            <td>종료</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><a><img src=""></a></td>
+            <td><a><img src=""></a></td>
+            <td>상품명1</td>
+            <td class="large">제목1</td>
+            <td>1</td>
+            <td>500</td>
+            <td>기한입찰</td>
+            <td class="medium">2022 / 05 / 26</td>
+            <td>종료</td>
+            <td></td>
+        </tr>
+
+    </table>
+
+    <table>
+        <tr>
+            <td><</td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>></td>
+        </tr>
+    </table>
+
+
+    <ul>
+        <li><</li>
+        <li class="selected">1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>></li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마이페이지</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style_header_footer.css">
+    <link rel="stylesheet" href="css/style-mypage.css">
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square-round.css" rel="stylesheet">
+    <script src="js/jquery-3.6.0.min.js"></script></head>
+<body>
+    <header>
+        <div class="top-bg">
+            <div class="top-navbar">
+                <div class="nav justify-content-end">
+                    <a class="nav-link" href="#">로그인</a>
+                    <a class="nav-link" href="#">회원가입</a>
+                </div>
+            </div>
+    
+        </div>
+        <div class="wrap">
+            <div class="logo">
+                <a href="index.html"><img src="images/main_logo.png" alt="로고"></a>
+            </div>
+            <nav class="nav justify-content-end ">
+                <a class="nav-link" href="guide.html">이용안내</a>
+                <img src="images/bar.png" alt="막대">
+                <a class="nav-link" href="#">상품검색</a>
+                <img src="images/bar.png" alt="막대">
+                <a class="nav-link" href="#">상품등록</a>
+                <img src="images/bar.png" alt="막대">
+                <a class="nav-link" href="#">고객센터</a>
+                <img src="images/bar.png" alt="막대">
+                <a class="nav-link" href="mypage.html" style="margin-right: 15px;">나의경매</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div>
+            <div class="box">
+                <h1>나의 경매 / 마이페이지</h1>
+            </div>
+            <div class="box2">
+                <h3>내 정보</h3>
+            </div>
+            <div class="test">
+                <div class="container" style="margin-left: 140px; margin-bottom: 60px; ">
+                    <div class="row">
+                      <div class="col"><h5>이종현 님</h5></div>
+                      <div class="col"><a class="btn btn-primary btn-light" href="guide.html" role="button">나의등급
+                        <img id="vip" src="images/vip.png" width=30px height=30px alt="vip"></a></div>
+                      <!-- <div class="col"><img id="vip" src="images/vip.png" width=30px height=30px alt="vip"></div> -->
+                    <!-- </div> -->
+                    <!-- <div class="row"> -->
+                      <div class="col"><a class="btn btn-primary btn-light" href="modifyInfo.html" role="button">회원정보수정</a></div>
+                      <!-- 출금 href 설정해야함 -->
+                      <div class="col"><a class="btn btn-primary btn-light" href="#" role="button">출금</a></div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h3>구매현황</h3>
+                <div class="test1" style="width: 900px; margin-left: 149px;  margin-bottom: 60px; ">
+                    <div class="table-responsive">
+                        <table class="table table-striped align-middle text-center table-hover">
+                            <tr>
+                                <th>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="checkall2">
+                                        <label class="form-check-label" for="flexCheckDisabled">
+                                        </label>
+                                    </div>
+                                </th>
+                                <th>구분</th>
+                                <th>물품번호</th>
+                                <th>이미지</th>
+                                <th>물품명</th>
+                                <th>구매가격</th>
+                                <th>구매정보</th>
+                                <th>구매일</th>
+                                <th>판매자</th>
+                                <th>입급기한</th>
+                            </tr>
+                            <tr>
+                                <td>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" name="chk2">
+                                    <label class="form-check-label">
+                                    </label>
+                                </div>
+                                </td>
+                                <td>1</td>
+                                <td>6015</td>
+                                <td><img id="vip" src="images/kanu.png" width=50px height=50px alt="vip"></td>
+                                <td>카누</td>
+                                <td>111,000원</td>
+                                <td>커피</td>
+                                <td>2022/06/15</td>
+                                <td>이종현</td>
+                                <td>2022/06/18</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" name="chk2">
+                                    <label class="form-check-label">
+                                    </label>
+                                </div>
+                                </td>
+                                <td>2</td>
+                                <td>6016</td>
+                                <td><img id="vip" src="images/maxim.png" width=50px height=50px alt="vip"></td>
+                                <td>맥심</td>
+                                <td>10,000원</td>
+                                <td>커피</td>
+                                <td>2022/06/15</td>
+                                <td>이종현</td>
+                                <td>2022/06/20</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h3>판매현황</h3>
+                <div class="test1" style="width: 900px; margin-left: 149px; margin-bottom: 60px; ">
+                    <div class="table-responsive">
+                        <table class="table table-striped align-middle text-center table-hover">
+                            <tr>
+                                <th>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="checkall">
+                                        <label class="form-check-label" for="flexCheckDisabled">
+                                        </label>
+                                    </div>
+                                </th>
+                                <th>구분</th>
+                                <th>물품번호</th>
+                                <th>이미지</th>
+                                <th>물품명</th>
+                                <th>구매가격</th>
+                                <th>구매정보</th>
+                                <th>구매일</th>
+                                <th>판매자</th>
+                                <th>입급기한</th>
+                            </tr>
+                            <tr>
+                                <td>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" name="chk">
+                                    <label class="form-check-label">
+                                    </label>
+                                </div>
+                                </td>
+                                <td>1</td>
+                                <td>1502</td>
+                                <td><img id="vip" src="images/case.png" width=50px height=50px alt="vip"></td>
+                                <td>케이스</td>
+                                <td>9,000원</td>
+                                <td>액세서리</td>
+                                <td>2022/06/19</td>
+                                <td>이종현</td>
+                                <td>2022/06/24</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" name="chk">
+                                    <label class="form-check-label">
+                                    </label>
+                                </div>
+                                </td>
+                                <td>2</td>
+                                <td>2900</td>
+                                <td><img id="vip" src="images/headphone.png" width=50px height=50px alt="vip"></td>
+                                <td>헤드폰</td>
+                                <td>77,000원</td>
+                                <td>헤드폰</td>
+                                <td>2022/06/12</td>
+                                <td>이종현</td>
+                                <td>2022/06/16</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h3>관심상품</h3>
+                <div class="test1" style="width: 900px; margin-left: 149px; margin-bottom: 50px ">
+                    <div class="table-responsive">
+                        <table class="table table-striped align-middle text-center table-hover">
+                            <tr>
+                                <th>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="checkall3">
+                                        <label class="form-check-label" for="flexCheckDisabled">
+                                        </label>
+                                    </div>
+                                </th>
+                                <th>구분</th>
+                                <th>물품번호</th>
+                                <th>이미지</th>
+                                <th>물품명</th>
+                                <th>입찰가</th>
+                                <th>제품정보</th>
+                                <th>남은기간</th>
+                                <th>판매자</th>
+                                <th>현재가격</th>
+                            </tr>
+                            <tr>
+                                <td>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" name="chk3">
+                                    <label class="form-check-label">
+                                    </label>
+                                </div>
+                                </td>
+                                <td>1</td>
+                                <td>0011</td>
+                                <td><img id="vip" src="images/kanu.png" width=50px height=50px alt="vip"></td>
+                                <td>박스</td>
+                                <td>1,000원</td>
+                                <td>박스</td>
+                                <td>2022/06/12</td>
+                                <td>이종현</td>
+                                <td>3,000원</td>
+                            </tr>
+                        </table>
+                    </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-div">
+            <div class="footer1">
+                <p><strong>Koction</strong>
+                    <br>서울특별시 강남구 강남대로 94길 20<br>
+                    상호명 : (주) 콕션<br>
+                    대표자 : 고기천<br>
+                </p>
+            </div>
+            <div class="footer2">
+                <p><strong>고객센터</strong>
+                    <br>Tel: 1688-5757 ( 평일 09:00 ~ 18:00 )<br>
+                    이메일: koction@koction.kr<br>
+                FAX: 1688-5758</p>
+            </div>
+        </div>
+        <div class="footer3">
+            <p>
+                (주)콕션은 통신판매중개자이며 통신판매의 당사자가 아닙니다. 따라서 (주)콕션은 상품거래정보 및 가격에 대하여 책임을 지지 않습니다.
+                <br>
+                본사이트의 모든 정보, 콘텐츠, UI 등에 대한 무단 복제, 전송, 배포, 스크래핑 등의 행위는 관련 법령에 의하여 엄격히 금지됩니다.
+            </p>
+            <span><small>&copy; 2022 Koction</small></span>
+        </div>
+    </footer>
+    <script>
+        $(function(){
+            $("#checkall").on("click", function(){
+                if($("#checkall").prop("checked")){
+                    $("input[name=chk]").prop("checked", true);
+                } else {
+                    $("input[name=chk]").prop("checked", false);
+                }
+            });
+
+            $("#checkall2").on("click", function(){
+                if($("#checkall2").prop("checked")){
+                    $("input[name=chk2]").prop("checked", true);
+                } else {
+                    $("input[name=chk2]").prop("checked", false);
+                }
+            });
+
+            $("#checkall3").on("click", function(){
+                if($("#checkall3").prop("checked")){
+                    $("input[name=chk3]").prop("checked", true);
+                } else {
+                    $("input[name=chk3]").prop("checked", false);
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript" src="js/bootstrap.bundle.js">
+        var currenttime = 'June 20, 2022 14:46:48'
+           var serverdate = new Date(currenttime)
+                    var targetdate = new Date('2022-06-22T22:00:00+09:00')
+               
+           function padlength(what){
+           var output=(what.toString().length==1)? "0"+what : what
+           return output
+           }
+       
+           function displaytime(){
+               serverdate.setSeconds(serverdate.getSeconds()+1)
+                       target()
+                   }
+       
+           function target(){
+               
+               if(targetdate.getTime() <= serverdate.getTime()) {
+       
+                   var day = Math.floor((serverdate - targetdate ) / (1000*3600*24));
+                   var hour = Math.floor((serverdate - targetdate ) / (1000*3600)) - (day * 24);
+                   var min = Math.floor((serverdate - targetdate ) / (1000 * 60)) - ((hour * 60) + (day * 24 * 60));
+                   var sec = Math.floor((serverdate - targetdate ) / 1000) - ((min * 60)+ (hour * 3600) + (day * 24 * 3600)) ;
+       
+                   hour = (hour < 10) ? '0'+hour : hour;
+                   min = (min < 10) ? '0'+min : min;
+                   sec = (sec < 10) ? '0'+sec : sec;
+       
+                   // 시간 지남.. on air보이고 시간 hide
+                   $("d-day make-timer").hide();
+                   $("#img_onair").show();
+       
+       
+                   var timestring=hour + ":" + min + ":" + sec;
+                   document.getElementById("servertime").innerHTML= "D +" + day+" "+timestring
+               } 
+               else {
+       
+                   var day = Math.floor((targetdate - serverdate) / (1000*3600*24));
+                   var hour = Math.floor((targetdate - serverdate) / (1000*3600)) - (day * 24);
+                   var min = Math.floor((targetdate - serverdate) / (1000 * 60)) - ((hour * 60) + (day * 24 * 60));
+                   var sec = Math.floor((targetdate - serverdate) / 1000) - ((min * 60)+ (hour * 3600) + (day * 24 * 3600)) ;
+       
+                   hour = (hour < 10) ? '0'+hour : hour;
+                   min = (min < 10) ? '0'+min : min;
+                   sec = (sec < 10) ? '0'+sec : sec;
+       
+                   $("#servertime").show();
+                   $("#img_onair").hide();
+       
+       
+                   var timestring=hour + ":" + min + ":" + sec;
+       
+                   document.getElementById("servertime").innerHTML= "D -" + day+" "+timestring
+               }
+       
+           }
+       
+           function updateTime()
+           {
+               $('#hours').text((serverdate.getHours() < 10) ? '0' + serverdate.getHours() : serverdate.getHours());
+               $('#minutes').text((serverdate.getMinutes() < 10) ? '0' + serverdate.getMinutes() : serverdate.getMinutes());
+               $('#seconds').text((serverdate.getSeconds() < 10) ? '0' + serverdate.getSeconds() : serverdate.getSeconds());		
+           }
+       
+           $( document ).ready(function() {
+               setInterval(function() {displaytime(); updateTime();}, 1000);
+           });
+           </script>
+
+    <p class="d-day make-timer" data-end-time="2022-06-21T10:00:00+09:00"><span class="hours"></span>시간 <span class="minutes"></span>분 <span class="seconds"></span>초 남음</p>
+
+</body>
+</html>
