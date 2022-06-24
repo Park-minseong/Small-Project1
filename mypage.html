@@ -9,62 +9,121 @@
     <link rel="stylesheet" href="css/style_header_footer.css">
     <link rel="stylesheet" href="css/style-mypage.css">
     <script src="js/bootstrap.bundle.min.js"></script>
-    <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square-round.css" rel="stylesheet">
     <script src="js/jquery-3.6.0.min.js"></script></head>
 <body>
-    <header>
+      <header>
         <div class="top-bg">
             <div class="top-navbar">
-                <div class="nav justify-content-end">
-                    <a class="nav-link" href="#">로그인</a>
-                    <a class="nav-link" href="#">회원가입</a>
+                <div class="nav justify-content-end topStatus">
+                    <a class="nav-link" href="#" disabled>admin님 환영합니다.</a>
+                    <a class="nav-link" href="index.html">로그아웃</a>
                 </div>
             </div>
-    
         </div>
         <div class="wrap">
             <div class="logo">
                 <a href="index.html"><img src="images/main_logo.png" alt="로고"></a>
             </div>
-            <nav class="nav justify-content-end ">
-                <a class="nav-link" href="guide.html">이용안내</a>
-                <img src="images/bar.png" alt="막대">
-                <a class="nav-link" href="#">상품검색</a>
-                <img src="images/bar.png" alt="막대">
-                <a class="nav-link" href="#">상품등록</a>
-                <img src="images/bar.png" alt="막대">
-                <a class="nav-link" href="#">고객센터</a>
-                <img src="images/bar.png" alt="막대">
-                <a class="nav-link" href="mypage.html" style="margin-right: 15px;">나의경매</a>
-            </nav>
+            <nav class="navbar navbar-expand-lg">
+                <div class="container-fluid">
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav justify-content-end">
+                        <a class="nav-link" href="guide.html">이용안내</a>
+                        <img src="images/bar.png" alt="막대">
+                        <a class="nav-link" href="Category.html">상품검색</a>
+                        <img src="images/bar.png" alt="막대">
+                        <a class="nav-link" href="_01_item_register_main.html">상품등록</a>
+                        <img src="images/bar.png" alt="막대">
+                        <a class="nav-link" href="support.html">고객센터</a>
+                        <img src="images/bar.png" alt="막대">
+                        <a class="nav-link last-nav" href="mypage.html">나의경매</a>
+                    </div>
+                  </div>
+                </div>
+              </nav>
         </div>
     </header>
     <main>
         <div>
-            <div class="box">
+            <!-- <div class="box">
                 <h1>나의 경매 / 마이페이지</h1>
-            </div>
+            </div> -->
+            <div class="title">
+                나의 경매
+             </div>
+            <article>
             <div class="box2">
                 <h3>내 정보</h3>
             </div>
-            <div class="test">
-                <div class="container" style="margin-left: 140px; margin-bottom: 60px; ">
+            <div class="mypage-info">
+                <div class="container">
                     <div class="row">
-                      <div class="col"><h5>이종현 님</h5></div>
-                      <div class="col"><a class="btn btn-primary btn-light" href="guide.html" role="button">나의등급
-                        <img id="vip" src="images/vip.png" width=30px height=30px alt="vip"></a></div>
+                      <div class="col"><span style="font-size: 22px;">이종현 님</span></div>
+                      <!--html 다른 페이지의 원하는 위치 이동 id값 이용-->
+                      <div class="col"><a class="btn btn-primary btn-light" href="guide.html#grade" role="button" ><span id="text_name1">나의등급</span>
+                        <img id="vip" src="images/vip.png" width=23px height=23px alt="vip"></a></div>
                       <!-- <div class="col"><img id="vip" src="images/vip.png" width=30px height=30px alt="vip"></div> -->
                     <!-- </div> -->
                     <!-- <div class="row"> -->
-                      <div class="col"><a class="btn btn-primary btn-light" href="modifyInfo.html" role="button">회원정보수정</a></div>
+                      <div class="col"><a class="btn btn-primary btn-light" href="modifyInfo.html" role="button"><span id="text_name2">회원정보수정</span></a></div>
                       <!-- 출금 href 설정해야함 -->
-                      <div class="col"><a class="btn btn-primary btn-light" href="#" role="button">출금</a></div>
+                      <div class="col">
+                        <a class="btn btn-primary btn-light" href="#" role="button" id="text_name3"
+                        data-bs-toggle="modal" data-bs-target="#intro">출금</a>
+                        <!-- <button class="btn" type="button"
+                        data-bs-toggle="modal" data-bs-target="#intro" id="btn_bid" style="color: black;">
+                        출금
+                        </button> -->
+                    </div>
+                    </div>
+                </div>
+                   <!--모달 영역-->
+                <div class="modal fade" id="intro">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title">
+                                    출금하기
+                                </h4>
+                            </div>
+                            <div class="modal-body">
+                                <div class="table-responsive">
+                                    <table class="table table-striped align-middle text-center">
+                                        <tr>
+                                            <th>이름</th>
+                                            <th>이종현</th>
+                                        </tr>
+                                        <tr>
+                                            <th>금액</th>
+                                            <td>
+                                                <input type="number" placeholder="금액 입력">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>계좌번호</th>
+                                            <td>
+                                                국민은행/57860210778
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <a class="btn btn-primary btn-light" href="#" role="button" id="text_name3"
+                                data-bs-dismiss="modal">출금하기</a>
+                                <a class="btn btn-primary btn-light" href="#" role="button" id="text_name3"
+                                data-bs-dismiss="modal">닫기</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
             <div>
                 <h3>구매현황</h3>
-                <div class="test1" style="width: 900px; margin-left: 149px;  margin-bottom: 60px; ">
+                <div class="buy-box">
                     <div class="table-responsive">
                         <table class="table table-striped align-middle text-center table-hover">
                             <tr>
@@ -75,16 +134,17 @@
                                         </label>
                                     </div>
                                 </th>
-                                <th>구분</th>
-                                <th>물품번호</th>
-                                <th>이미지</th>
-                                <th>물품명</th>
-                                <th>구매가격</th>
-                                <th>구매정보</th>
-                                <th>구매일</th>
-                                <th>판매자</th>
-                                <th>입급기한</th>
+                                <th nowrap>구분</th>
+                                <th nowrap>물품번호</th>
+                                <th nowrap>이미지</th>
+                                <th nowrap>물품명</th>
+                                <th nowrap>구매가격</th>
+                                <th nowrap>구매정보</th>
+                                <th nowrap>구매일</th>
+                                <th nowrap>판매자</th>
+                                <th nowrap>입급기한</th>
                             </tr>
+
                             <tr>
                                 <td>
                                 <div class="form-check">
@@ -93,16 +153,18 @@
                                     </label>
                                 </div>
                                 </td>
-                                <td>1</td>
-                                <td>6015</td>
-                                <td><img id="vip" src="images/kanu.png" width=50px height=50px alt="vip"></td>
-                                <td>카누</td>
-                                <td>111,000원</td>
-                                <td>커피</td>
-                                <td>2022/06/15</td>
-                                <td>이종현</td>
-                                <td>2022/06/18</td>
+                                <!--구매현황 구분 1번 해당 제품으로 이동 href 추가 필요-->
+                                <td onClick="location.href='ProductInfo.html'">1</td>
+                                <td nowrap>6015</td>
+                                <td nowrap><img id="vip" src="images/product01_2.jpg" width=50px height=50px alt="vip"></td>
+                                <td nowrap>아이폰</td>
+                                <td nowrap>850,000원</td>
+                                <td nowrap>핸드폰</td>
+                                <td nowrap>2022/06/30</td>
+                                <td nowrap>bitcamp</td>
+                                <td nowrap>2022/07/02</td>
                             </tr>
+                            
                             <tr>
                                 <td>
                                 <div class="form-check">
@@ -111,15 +173,16 @@
                                     </label>
                                 </div>
                                 </td>
-                                <td>2</td>
-                                <td>6016</td>
-                                <td><img id="vip" src="images/maxim.png" width=50px height=50px alt="vip"></td>
-                                <td>맥심</td>
-                                <td>10,000원</td>
-                                <td>커피</td>
-                                <td>2022/06/15</td>
-                                <td>이종현</td>
-                                <td>2022/06/20</td>
+                                <!--구매현황 구분 2번 해당 제품페이지로 이동 href 추가 필요-->
+                                <td onClick="location.href='ProductInfo.html'">2</td>
+                                <td nowrap>6016</td>
+                                <td nowrap><img id="vip" src="images/maxim.png" width=50px height=50px alt="vip"></td>
+                                <td nowrap>맥심</td>
+                                <td nowrap>10,000원</td>
+                                <td nowrap>커피</td>
+                                <td nowrap>2022/06/15</td>
+                                <td nowrap>Adam</td>
+                                <td nowrap>2022/06/20</td>
                             </tr>
                         </table>
                     </div>
@@ -127,7 +190,7 @@
             </div>
             <div>
                 <h3>판매현황</h3>
-                <div class="test1" style="width: 900px; margin-left: 149px; margin-bottom: 60px; ">
+                <div class="sell-box">
                     <div class="table-responsive">
                         <table class="table table-striped align-middle text-center table-hover">
                             <tr>
@@ -138,15 +201,15 @@
                                         </label>
                                     </div>
                                 </th>
-                                <th>구분</th>
-                                <th>물품번호</th>
-                                <th>이미지</th>
-                                <th>물품명</th>
-                                <th>구매가격</th>
-                                <th>구매정보</th>
-                                <th>구매일</th>
-                                <th>판매자</th>
-                                <th>입급기한</th>
+                                <th nowrap>구분</th>
+                                <th nowrap>물품번호</th>
+                                <th nowrap>이미지</th>
+                                <th nowrap>물품명</th>
+                                <th nowrap>구매가격</th>
+                                <th nowrap>구매정보</th>
+                                <th nowrap>구매일</th>
+                                <th nowrap>판매자</th>
+                                <th nowrap>입급기한</th>
                             </tr>
                             <tr>
                                 <td>
@@ -156,16 +219,18 @@
                                     </label>
                                 </div>
                                 </td>
-                                <td>1</td>
-                                <td>1502</td>
+                                <!--판매현황 구분 1번 해당 제품 수정페이지로 이동 href 추가 필요-->
+                                <td onClick="location.href='ProductInfo.html'">1</td>
+                                <td nowrap>1502</td>
                                 <td><img id="vip" src="images/case.png" width=50px height=50px alt="vip"></td>
-                                <td>케이스</td>
-                                <td>9,000원</td>
-                                <td>액세서리</td>
-                                <td>2022/06/19</td>
-                                <td>이종현</td>
-                                <td>2022/06/24</td>
+                                <td nowrap>케이스</td>
+                                <td nowrap>9,000원</td>
+                                <td nowrap>액세서리</td>
+                                <td nowrap>2022/06/19</td>
+                                <td nowrap>이종현</td>
+                                <td nowrap>2022/06/24</td>
                             </tr>
+                            
                             <tr>
                                 <td>
                                 <div class="form-check">
@@ -174,15 +239,16 @@
                                     </label>
                                 </div>
                                 </td>
-                                <td>2</td>
-                                <td>2900</td>
+                                <!--판매현황 구분 2번 해당 수정페이지로 이동 href 추가 필요-->
+                                <td onClick="location.href='ProductInfo.html'">2</td>
+                                <td nowrap>2900</td>
                                 <td><img id="vip" src="images/headphone.png" width=50px height=50px alt="vip"></td>
-                                <td>헤드폰</td>
-                                <td>77,000원</td>
-                                <td>헤드폰</td>
-                                <td>2022/06/12</td>
-                                <td>이종현</td>
-                                <td>2022/06/16</td>
+                                <td nowrap>헤드폰</td>
+                                <td nowrap>77,000원</td>
+                                <td nowrap>헤드폰</td>
+                                <td nowrap>2022/06/12</td>
+                                <td nowrap>이종현</td>
+                                <td nowrap>2022/06/16</td>
                             </tr>
                         </table>
                     </div>
@@ -190,7 +256,7 @@
             </div>
             <div>
                 <h3>관심상품</h3>
-                <div class="test1" style="width: 900px; margin-left: 149px; margin-bottom: 50px ">
+                <div class="sell-box">
                     <div class="table-responsive">
                         <table class="table table-striped align-middle text-center table-hover">
                             <tr>
@@ -201,16 +267,17 @@
                                         </label>
                                     </div>
                                 </th>
-                                <th>구분</th>
-                                <th>물품번호</th>
-                                <th>이미지</th>
-                                <th>물품명</th>
-                                <th>입찰가</th>
-                                <th>제품정보</th>
-                                <th>남은기간</th>
-                                <th>판매자</th>
-                                <th>현재가격</th>
+                                <th nowrap>구분</th>
+                                <th nowrap>물품번호</th>
+                                <th nowrap>이미지</th>
+                                <th nowrap>물품명</th>
+                                <th nowrap>입찰가</th>
+                                <th nowrap>제품정보</th>
+                                <th nowrap>남은기간</th>
+                                <th nowrap>판매자</th>
+                                <th nowrap>현재가격</th>
                             </tr>
+                            
                             <tr>
                                 <td>
                                 <div class="form-check">
@@ -219,20 +286,22 @@
                                     </label>
                                 </div>
                                 </td>
-                                <td>1</td>
-                                <td>0011</td>
+                                <!--관심상품 구분 1번 해당 제품페이지로 이동 href 추가 필요-->
+                                <td onClick="location.href='ProductInfo.html'">1</td>
+                                <td nowrap>0011</td>
                                 <td><img id="vip" src="images/kanu.png" width=50px height=50px alt="vip"></td>
-                                <td>박스</td>
-                                <td>1,000원</td>
-                                <td>박스</td>
-                                <td>2022/06/12</td>
-                                <td>이종현</td>
-                                <td>3,000원</td>
+                                <td nowrap>카누</td>
+                                <td nowrap>1,000원</td>
+                                <td nowrap>카누</td>
+                                <td nowrap>2022/06/12</td>
+                                <td nowrap>고기천</td>
+                                <td nowrap>3,000원</td>
                             </tr>
                         </table>
                     </div>
             </div>
         </div>
+    </article>
     </main>
     <footer>
         <div class="footer-div">
@@ -244,10 +313,12 @@
                 </p>
             </div>
             <div class="footer2">
-                <p><strong>고객센터</strong>
-                    <br>Tel: 1688-5757 ( 평일 09:00 ~ 18:00 )<br>
-                    이메일: koction@koction.kr<br>
-                FAX: 1688-5758</p>
+                <div>
+                    <p><strong>고객센터</strong>
+                        <br>Tel: 1688-5757 ( 평일 09:00 ~ 18:00 )<br>
+                        이메일: koction@koction.kr<br>
+                    FAX: 1688-5758</p>
+                </div>
             </div>
         </div>
         <div class="footer3">
@@ -284,7 +355,22 @@
                     $("input[name=chk3]").prop("checked", false);
                 }
             });
+
+            window.onresize = function (event) {
+                var innerWidth = window.innerWidth;
+
+                if(innerWidth < 992){
+                    $("#text_name1").text("등급");
+                    $("#text_name2").text("정보수정");
+                } else {
+                    $("#text_name1").text("나의등급");
+                    $("#text_name2").text("회원정보수정");
+                }
+            }
+                
         });
+
+        
     </script>
 </body>
 </html>

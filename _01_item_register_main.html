@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="css/ress.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="css/style_header_footer.css">
+    <link rel="stylesheet" href="css/_01_item_register_main.css">
+
+
+    <title>상품등록 메인 페이지</title>
+</head>
+<body>
+    <!--header-->
+    <header>
+        <div class="top-bg">
+            <div class="top-navbar">
+                <div class="nav justify-content-end topStatus">
+                    <a class="nav-link" href="#" disabled>admin님 환영합니다.</a>
+                    <a class="nav-link" href="index.html">로그아웃</a>
+                </div>
+            </div>
+    
+        </div>
+        <div class="wrap">
+            <div class="logo">
+                <a href="index.html"><img src="images/main_logo.png" alt="로고"></a>
+            </div>
+            <nav class="navbar navbar-expand-lg">
+                <div class="container-fluid">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav justify-content-end">
+                        <a class="nav-link" href="">이용안내</a>
+                        <img src="images/bar.png" alt="막대">
+                        <a class="nav-link" href="Category.html">상품검색</a>
+                        <img src="images/bar.png" alt="막대">
+                        <a class="nav-link" href="_item_register">상품등록</a>
+                        <img src="images/bar.png" alt="막대">
+                        <a class="nav-link" href="support.html">고객센터</a>
+                        <img src="images/bar.png" alt="막대">
+                        <a class="nav-link last-nav" href="mypage.html">나의경매</a>
+                    </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    
+    <main>
+        <div id="pageTitle">상품등록</div>
+        <hr>
+        <div class="invisibleDiv">
+            <div class="newItem" onclick=""><a href="_02_myitem_register.html">+ 신규상품등록</a></div>
+        </div>
+        <div class="table_header">
+            <table>
+                <tr>
+                    <td>이미지</td>
+                    <td>상품명</td>
+                    <td class="wide">제목</td>
+                    <td>수량</td>
+                    <td class="less_wide">시작가</td>
+                    <td>경매방식</td>
+                    <td class="wide">등록일</td>
+                    <td>상태</td>
+                    <td class="last"></td>
+                </tr>
+            </table>    
+        </div>
+        <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    <table>
+                        <tr>
+                            <td><a><img src="images/kanu.png"></a></td>
+                            <td>커피</td>
+                            <td class="wide" id="name0">먹다 남은 카누 팝니다!</td>
+                            <td>1</td>
+                            <td class="less_wide">30,000원</td>
+                            <td>기한입찰</td>
+                            <td class="wide">2022 / 05 / 26</td>
+                            <td class="sold">판매완료</td>
+                            <td></td>
+                        </tr>
+                    </table>
+                </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <div class="detail">
+                        <div class="imageArea"><img src="images/kanu.png" alt=""></div>
+                        <div class="textArea">100개 들었는데 3개 먹어서 97개 남아있습니다</div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    <table>
+                        <tr>
+                            <td><a><img src="images/kanu.png"></a></td>
+                            <td>상품명1</td>
+                            <td class="wide" id="name1">제목1</td>
+                            <td>1</td>
+                            <td class="less_wide">500</td>
+                            <td>기한입찰</td>
+                            <td class="wide">2022 / 05 / 26</td>
+                            <td class="sold">판매완료</td>
+                            <td></td>
+                        </tr>
+                    </table>
+                </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <div class="detail">
+                        <div class="imageArea"><img src="images/kanu.png" alt=""></div>
+                        <div class="textArea">100개 들었는데 3개 먹어서 97개 남아있습니다</div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapsetdree">
+                    <table>
+                        <tr>
+                            <td><a><img src="images/kanu.png"></a></td>
+                            <td>상품명1</td>
+                            <td class="wide" id="name2">제목2</td>
+                            <td>1</td>
+                            <td class="less_wide">500</td>
+                            <td>기한입찰</td>
+                            <td class="wide">2022 / 05 / 26</td>
+                            <td class="ongoing">진행중</td>
+                            <td></td>
+                        </tr>
+                    </table>
+                </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <div class="detail">
+                        <div class="imageArea"><img src="images/kanu.png" alt=""></div>
+                        <div class="textArea">100개 들었는데 3개 먹어서 97개 남아있습니다</div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFour">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapsetdree">
+                    <table>
+                        <tr>
+                            <td><a><img src="images/kanu.png"></a></td>
+                            <td>상품명1</td>
+                            <td class="wide" id="name3">제목3</td>
+                            <td>1</td>
+                            <td class="less_wide">500</td>
+                            <td>기한입찰</td>
+                            <td class="wide">2022 / 05 / 26</td>
+                            <td class="not_sold">입찰종료</td>
+                            <td>
+                                <div class="rebidding" type="button" data-bs-toggle="modal" data-bs-target="#intro">
+                                    재입찰
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <div class="detail">
+                        <div class="imageArea"><img src="images/kanu.png" alt=""></div>
+                        <div class="textArea">100개 들었는데 3개 먹어서 97개 남아있습니다</div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFive">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapsetdree">
+                    <table>
+                        <tr>
+                            <td><a><img src="images/kanu.png"></a></td>
+                            <td>상품명1</td>
+                            <td class="wide" id="name4">제목4</td>
+                            <td>1</td>
+                            <td class="less_wide">500</td>
+                            <td>기한입찰</td>
+                            <td class="wide">2022 / 05 / 26</td>
+                            <td class="not_sold">입찰종료</td>
+                            <td>
+                                <div class="rebidding" type="button" data-bs-toggle="modal" data-bs-target="#intro">
+                                    재입찰
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </button>
+                </h2>
+                <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <div class="detail">
+                        <div class="imageArea"><img src="images/kanu.png" alt=""></div>
+                        <div class="textArea">100개 들었는데 3개 먹어서 97개 남아있습니다</div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingSix">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapsetdree">
+                    <table>
+                        <tr>
+                            <td><a><img src="images/kanu.png"></a></td>
+                            <td>커피</td>
+                            <td class="wide" id="name4">제목5</td>
+                            <td>1</td>
+                            <td class="less_wide">500</td>
+                            <td>기한입찰</td>
+                            <td class="wide">2022 / 05 / 26</td>
+                            <td class="not_sold">입찰종료</td>
+                            <td>
+                                <div class="rebidding" type="button" data-bs-toggle="modal" data-bs-target="#intro">
+                                    재입찰
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </button>
+                </h2>
+                <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <div class="detail">
+                        <div class="imageArea"><img src="images/kanu.png" alt=""></div>
+                        <div class="textArea">100개 들었는데 3개 먹어서 97개 남아있습니다</div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+        <br><br><br><br><br><br><br><br><br><br>
+    </main>
+    <!--footer-->
+    <footer>
+        <div class="footer-div">
+            <div class="footer1">
+                <p><strong>Koction</strong>
+                    <br>서울특별시 강남구 강남대로 94길 20<br>
+                    상호명 : (주) 콕션<br>
+                    대표자 : 고기천<br>
+                </p>
+            </div>
+            <div class="footer2">
+                <div>
+                    <p><strong>고객센터</strong>
+                        <br>Tel: 1688-5757 ( 평일 09:00 ~ 18:00 )<br>
+                        이메일: koction@koction.kr<br>
+                    FAX: 1688-5758</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer3">
+            <p>
+                (주)콕션은 통신판매중개자이며 통신판매의 당사자가 아닙니다. 따라서 (주)콕션은 상품거래정보 및 가격에 대하여 책임을 지지 않습니다.
+                <br>
+                본사이트의 모든 정보, 콘텐츠, UI 등에 대한 무단 복제, 전송, 배포, 스크래핑 등의 행위는 관련 법령에 의하여 엄격히 금지됩니다.
+            </p>
+            <span><small>&copy; 2022 Koction</small></span>
+        </div>
+    </footer>
+
+    <!-- 재입찰 모달 -->
+    <div class="modal fade" id="intro">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">modal-title</h4>
+                </div>
+                <div class="modal-body">
+                    <h3>modal-body</h3>
+                    <p>modal-body</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="rebidding_on" class="btn btn-primary" style="background-color: rgb(18,100,100)">
+                        재입찰
+                    </button>
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal" style="background-color: lightgray">
+                        닫기
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Javascript 영역 -->
+    <script>
+
+        // const name = ['name0', 'name1', 'name2', 'name3', 'name4'] 
+
+        $(function() {
+            $(".rebidding").on("click", function() {
+                console.log($(this).parent());
+                $(".modal-title").text($("#name3").text())
+                $(".modal-body").text($("table[3]").text())
+                // var lis = document.getElementsByTagName("table").getElementsByTagName("td")
+                // alert(lis[3].textContent)
+
+            });
+        });
+
+        var lis = document.getElementsByTagName("table").document.getElementsByTagName("td")
+        alert(lis[0].textcontent)
+
+        // 클래스 생성
+        class Item {
+            constructor(image, name, title, amount, price, bidType, regiDate, status, rebidding){
+            this.image = image
+            this.name = name
+            this.title = title
+            this.amount = amount
+            this.price = price
+            this.bidType = bidType
+            this.regiDate = regiDate
+            this.status = status
+            this.rebidding = rebidding
+        }}
+
+        var item1 = new Item("#", 'name', 'selling', 1, 1000, 'a', '2022 / 06 / 18', 'ongoing')
+        $()
+
+
+    </script>
+</body>
+</html>

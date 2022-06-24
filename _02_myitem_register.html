@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="css/ress.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style_header_footer.css">
+    <link rel="stylesheet" href="css/_02_myitem_register.css">
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <title>신규상품등록</title>
+
+</head>
+<body>
+    <!--header-->
+    <header>
+        <div class="top-bg">
+            <div class="top-navbar">
+                <div class="nav justify-content-end topStatus">
+                    <a class="nav-link" href="#" disabled>admin님 환영합니다.</a>
+                    <a class="nav-link" href="index.html">로그아웃</a>
+                </div>
+            </div>
+    
+        </div>
+        <div class="wrap">
+            <div class="logo">
+                <a href="index.html"><img src="images/main_logo.png" alt="로고"></a>
+            </div>
+            <nav class="navbar navbar-expand-lg">
+                <div class="container-fluid">
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav justify-content-end">
+                        <a class="nav-link" href="">이용안내</a>
+                        <img src="images/bar.png" alt="막대">
+                        <a class="nav-link" href="Category.html">상품검색</a>
+                        <img src="images/bar.png" alt="막대">
+                        <a class="nav-link" href="_item_register">상품등록</a>
+                        <img src="images/bar.png" alt="막대">
+                        <a class="nav-link" href="support.html">고객센터</a>
+                        <img src="images/bar.png" alt="막대">
+                        <a class="nav-link last-nav" href="mypage.html">나의경매</a>
+                    </div>
+                  </div>
+                </div>
+              </nav>
+        </div>
+    </header>
+    <main>
+        <div id="pageTitle">신규상품등록</div>
+        <hr>
+        <!-- 상단 내용 입력 -->
+        <section class="top">
+            <!-- section -->
+            <!-- 1. 좌상단 이미지 -->
+            <article style="margin-left: 60px">
+                <!-- article -->
+                <div>
+                    <!-- div -->
+                    <div>
+                        <div class="section_upload">
+                            <!-- div>div -->
+                            <form action="" method="post" enctype="multipart/form-data">
+                                <input type="file" id="fileUpload" accept='image/*' style="display: none" >
+                                <img id="previewImg" width="240px" height="240px" min-width="50%" style="border: 1px solid white" >
+                            </form>
+                            <label for="fileUpload" style="margin-left: 75px;" ><img id="uploadIcon" src="images/file_upload.png" width="20px" height="20px" margin="3px" alt="사진 올리기">사진 업로드</label>
+
+                        </div>
+                            <div id="previewItems" style="border: 1px solid white" class="section_preview">
+                        </div>
+                    </div>
+                    <table>
+                        <tr>
+                            <td class="bar"><</td>
+                            <td class="selected">1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td class="bar">></td>
+                        </tr>
+                    </table>
+                </div>
+            </article>
+
+            <!-- 2. 우상단 정보 기입란 -->
+            <aside>
+                <!-- aside -->
+                <div>
+                    <!-- div -->
+                    <table style="margin: 10px; margin-left: 30px;">
+                        <tr>
+                            <td class="namecontent">제목</td>
+                            <td class="inputcontent"><input type="text" required></td>
+                        </tr>
+                        <tr>
+                            <td class="namecontent">상품명</td>
+                            <td class="inputcontent"><input type="text" required></td>
+                        </tr>
+                        <tr>
+                            <td class="namecontent">카테고리</td>
+                            <td class="inputcontent"><input type="text" required></td>
+                        </tr>
+                        <tr>
+                            <td class="namecontent">수량</td>
+                            <td class="inputcontent"><input type="text" required></td>
+                        </tr>
+                        <tr>
+                            <td class="namecontent">시작가</td>
+                            <td class="inputcontent"><input type="text" required></td>
+                        </tr>
+                        <tr>
+                            <td class="namecontent">즉시 구매가</td>
+                            <td class="inputcontent"><input type="text" required></td>
+                        </tr>
+                        <tr>
+                            <td class="namecontent">경매방식</td>
+                            <td class="inputcontent">
+                                <div>
+                                    <button class="opt1">기한입찰</button>
+                                    <div></div>
+                                    <button class="opt2">xx입찰</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="namecontent">경매기간</td>
+                            <td class="inputcontent"><input type="text" required></td>
+                        </tr>
+                        <tr>
+                            <td class="namecontent">배송방식</td>
+                            <td class="inputcontent"><input type="text" required></td>
+                        </tr>
+                    </table>
+                </div>
+            </aside>
+
+            <script>
+
+                // 경매방식 선택하기
+
+                let opt_switch = true
+
+                $(".opt1").click(function () {
+                    opt_switch = true
+                    toggleSwitch()
+                    console.log(opt_switch)
+                })
+
+                $(".opt2").click(function () {
+                    opt_switch = false
+                    toggleSwitch()
+                    console.log(opt_switch)
+                })
+
+                function toggleSwitch() {
+                if(opt_switch == true) {
+                    $(".opt1").css("background", "rgb(17, 100, 100)")
+                    $(".opt1").css("color", "white")
+                    $(".opt2").css("background", "lightgray")
+                    $(".opt2").css("color", "black")
+                } else if (opt_switch == false) {
+                    $(".opt2").css("background", "rgb(17, 100, 100)")
+                    $(".opt2").css("color", "white")
+                    $(".opt1").css("background", "lightgray")
+                    $(".opt1").css("color", "black")
+                }}
+
+                // 파일 업로드
+                const fileInput = document.getElementById("fileUpload");
+
+                const handleFiles = (e) => {
+                const selectedFile = [...fileInput.files];
+                // 객체 선언
+                const fileReader = new FileReader();
+
+                fileReader.readAsDataURL(selectedFile[0]);
+
+                // 미니뷰에 사진 추가
+                fileReader.onload = function () {
+                    // console.log(fileReader, 'hi~');
+                    // console.log(document.getElementById("previewImg").src, 'prev');
+                    if (document.getElementById("previewImg").src) {
+                        const previewImagesHolder = document.getElementById("previewItems")
+                        const prevImage = document.createElement("img");
+                        prevImage.src = fileReader.result;
+                        const prevImageDiv = document.createElement("div");
+                        prevImageDiv.className = 'miniview';
+                        prevImageDiv.append(prevImage);
+                        previewImagesHolder.append(prevImageDiv)
+                    }
+                    document.getElementById("previewImg").src = fileReader.result;
+                };
+                };
+
+                fileInput.addEventListener("change", handleFiles);
+
+                // .html?key1=value1&key2=value2&
+                // submit
+            </script>
+
+
+        </section>
+
+        <!-- 하단 세부 내용 입력 -->
+        <section class="bottom">
+            
+            <div class="bottom-up">
+                <div></div>
+                <div>상세내용기재</div>
+                <div></div>
+                <div></div>
+                <div>
+                    <textarea name="" id="" cols="30" rows="10">
+
+                    </textarea>
+                </div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="bottom-down">
+                <!-- 투명박스 -->
+                <div></div>
+                <!-- 제출/임시저장/취소 버튼 -->
+                <input class="rebidding blue" value="등록" type="submit" data-bs-toggle="modal" data-bs-target="#intro"></input>
+                <input value="임시저장"></input>
+                <input value="취소" type="reset"></input>
+            </div>
+            <br>
+            <br>
+            <div class="rebidding" type="button" data-bs-toggle="modal" data-bs-target="#intro">
+                등록
+            </div>
+            <div></div>
+            <!-- 재입찰 모달 -->
+            <div class="modal fade" id="intro">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title">아이폰12 팝니다</h4>
+                        </div>
+                        <div class="modal-body">
+                            <table id="modal_table">
+                                <tr>
+                                    <td><strong>상품명</strong></td>
+                                    <td>스마트폰</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>카테고리</strong></td>
+                                    <td>디지털 > 스마트폰</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>수량</strong></td>
+                                    <td>1</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>시작가</strong></td>
+                                    <td>700,000원</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>즉시구매가</strong></td>
+                                    <td>800,000원</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>경매방식</strong></td>
+                                    <td>기한입찰</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>경매기간</strong></td>
+                                    <td>24시간</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>배송방식</strong></td>
+                                    <td>택배배송</td>
+                                </tr>
+                            </table>
+                            <br>
+                            <p style="color: rgb(18, 100, 100); text-align: center;"><strong>상기 정보로 등록하시겠습니까?</strong></p>
+                        </div>
+                        <div class="modal-footer">
+                            <!-- button이나 div에는 href 속성을 넣을 수 없기 때문에 a태그로 감싸줘야 함 -->
+                            <a href="_01_item_register_main.html">
+                                <button type="button" id="rebidding_on" data-bs-dismiss="modal" class="btn btn-primary" style="background-color: rgb(18,100,100)">
+                                등록
+                                </button>
+                            </a>
+                            <button type="button" class="btn btn-primary" data-bs-dismiss="modal" style="background-color: lightgray">
+                                취소
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+    <!--footer-->
+    <footer>
+    <div class="footer-div">
+        <div class="footer1">
+            <p><strong>Koction</strong>
+                <br>서울특별시 강남구 강남대로 94길 20<br>
+                상호명 : (주) 콕션<br>
+                대표자 : 고기천<br>
+            </p>
+        </div>
+        <div class="footer2">
+            <div>
+                <p><strong>고객센터</strong>
+                    <br>Tel: 1688-5757 ( 평일 09:00 ~ 18:00 )<br>
+                    이메일: koction@koction.kr<br>
+                FAX: 1688-5758</p>
+            </div>
+        </div>
+    </div>
+    <div class="footer3">
+        <p>
+            (주)콕션은 통신판매중개자이며 통신판매의 당사자가 아닙니다. 따라서 (주)콕션은 상품거래정보 및 가격에 대하여 책임을 지지 않습니다.
+            <br>
+            본사이트의 모든 정보, 콘텐츠, UI 등에 대한 무단 복제, 전송, 배포, 스크래핑 등의 행위는 관련 법령에 의하여 엄격히 금지됩니다.
+        </p>
+        <span><small>&copy; 2022 Koction</small></span>
+    </div>
+</footer>
+</html>

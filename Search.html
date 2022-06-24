@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>검색결과</title>
+    <link rel="stylesheet" href="css/ress.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square-round.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/Ca_Se_In.css">
+    <link rel="stylesheet" href="css/style_header_footer.css">
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+
+</head>
+
+<body>
+         <!--header-->
+    <header>
+        <div class="top-bg">
+            <div class="top-navbar">
+                <div class="nav justify-content-end">
+                    <a class="nav-link" href="login.html">로그인</a>
+                    <a class="nav-link" href="register.html">회원가입</a>
+                </div>
+            </div>
+    
+        </div>
+        <div class="wrap">
+            <div class="logo">
+                <a href="index.html"><img src="images/main_logo.png" alt="로고"></a>
+            </div>
+            <nav class="navbar navbar-expand-lg">
+                <div class="container-fluid">
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav justify-content-end">
+                        <a class="nav-link" href="guide.html">이용안내</a>
+                        <img src="images/bar.png" alt="막대">
+                        <a class="nav-link" href="Category.html">상품검색</a>
+                        <img src="images/bar.png" alt="막대">
+                        <a class="nav-link" href="_01_item_register_main.html">상품등록</a>
+                        <img src="images/bar.png" alt="막대">
+                        <a class="nav-link" href="support.html">고객센터</a>
+                        <img src="images/bar.png" alt="막대">
+                        <a class="nav-link last-nav" href="mypage.html">나의경매</a>
+                    </div>
+                  </div>
+                </div>
+              </nav>
+        </div>
+    </header>
+    <main>
+        <div class="title">
+            상품 검색
+         </div>
+        <!-- 검색 버튼 영역 -->
+        <hr>
+        <div id="searchArea" style="text-align: center;">
+            <div id="searchBar">
+                <svg xmlns="http://www.w3.org/2000/svg" style=" color: rgba(17,100,100,1);" width="24" height="24"
+                    fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                    <path
+                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                </svg>
+                    <select class="form-select se_select">
+                        <option selected>조건
+                        </option>
+                        <option value="1">물품명</option>
+                        <option value="2">판매자명</option>
+                        <option value="3">가격</option>
+                    </select>
+                <input type="search">
+                <a href="Search.html">
+                    <button id="sc_btn" type="submit">Search</button>
+                </a>
+            </div>
+        </div>
+        <hr>
+        <!-- 검색 결과 영역 -->
+        <div id="se_num">
+            <svg xmlns="http://www.w3.org/2000/svg" style=" color: rgba(17,100,100,1);" width="24" height="24"
+                fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                <path
+                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+            </svg>
+            <pre>  검색결과  -  23건</pre>
+            <br><br>
+            <!-- <pre>           카테고리 : 디지털/가전  -  핸드폰</pre> -->
+        </div>
+        <!-- 검색 결과 상품 리스트 -->
+        <div id="se_List">
+            <div class="se_Info" id="se_Info">
+                <a href="ProductInfo.html">
+                    <table id="se_Table">
+                        <thead>
+                            <tr class="tr_img">
+                                <th colspan="2"><img src="images/product01_1.jpg" id="se_im" alt="아이폰14_1"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td colspan="2"> 상품명 : 아이폰 14 - 256gb</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">상품가격 : 850,000원</td>
+                            </tr>
+                            <tr>
+                                <td style="border-right: 1px solid rgb(140, 140, 140);">입찰 수 2</td>
+                                <td>조회 수 9</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">판매자ID : bitcamp</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">남은시간 : 06일 21시간</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </a>
+            </div>
+
+            <div class="se_Info" id="se_Info">
+                <a href="#">
+                    <table id="se_Table">
+                        <thead>
+                            <tr>
+                                <th colspan="2"><img src="images/화장품.png" id="se_im" alt="화장품"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td colspan="2"> 상품명 : 가히 링클 바운스 멀티밤</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">상품가격 : 46,500원</td>
+                            </tr>
+                            <tr>
+                                <td style="border-right: 1px solid rgb(140, 140, 140);">입찰 수 180</td>
+                                <td>조회 수 21,867</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">판매자ID : bitcamp</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">남은시간 : 18시간 02분</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </a>
+            </div>
+
+            <div class="se_Info" id="se_Info">
+                <a href="#">
+                    <table id="se_Table">
+                        <thead>
+                            <tr>
+                                <th colspan="2"><img src="images/운동화.png" id="se_im" alt="아이폰14_1"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td colspan="2"> 상품명 : 휠라 꼬모 FS1SIB127</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">상품가격 : 25,000원</td>
+                            </tr>
+                            <tr>
+                                <td style="border-right: 1px solid rgb(140, 140, 140);">입찰 수 11</td>
+                                <td>조회 수 21,865</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">판매자ID : bitcamp</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">남은시간 : 24시간 55분</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </a>
+            </div>
+
+            <div class="se_Info" id="se_Info">
+                <a href="#">
+                    <table id="se_Table">
+                        <thead>
+                            <tr>
+                                <th colspan="2"><img src="images/자전거.png" id="se_im" alt="아이폰14_1"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td colspan="2"> 상품명 : 2022 벤조 24인치 전기자전거</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">상품가격 : 960,000원</td>
+                            </tr>
+                            <tr>
+                                <td style="border-right: 1px solid rgb(140, 140, 140);">입찰 수 7</td>
+                                <td>조회 수 11,467</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">판매자ID : bitcamp</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">남은시간 : 05시간 10분</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </a>
+            </div>
+
+            <div class="se_Info" id="se_Info">
+                <a href="#">
+                    <table id="se_Table">
+                        <thead>
+                            <tr>
+                                <th colspan="2"><img src="images/kanu.png" id="se_im" alt="커피카누"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td colspan="2"> 상품명 : 000</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">상품가격 : 000원</td>
+                            </tr>
+                            <tr>
+                                <td style="border-right: 1px solid rgb(140, 140, 140);">입찰 수 00</td>
+                                <td>조회 수 00</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">판매자ID : bitcamp</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">남은시간 : 00시간 00분</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </a>
+            </div>
+
+            <div class="se_Info" id="se_Info">
+                <a href="#">
+                    <table id="se_Table">
+                        <thead>
+                            <tr>
+                                <th colspan="2"><img src="images/maxim.png" id="se_im" alt="커피맥심"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td colspan="2"> 상품명 : 000</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">상품가격 : 000원</td>
+                            </tr>
+                            <tr>
+                                <td style="border-right: 1px solid rgb(140, 140, 140);">입찰 수 00</td>
+                                <td>조회 수 00</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">판매자ID : bitcamp</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">남은시간 : 00시간 00분</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </a>
+            </div>
+        </div>
+        <!-- 검색결과 창 하단 버튼 -->
+        <div id="page_btn">
+            <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+                <div class="btn-group me-2" role="group" aria-label="Second group">
+                    <div class="btn_page_side">
+                        <button type="button" class="btn btn-outline-secondary btn_page" style="border: 0;"><</button>
+                        <button type="button" class="btn btn-outline-secondary btn_page">1</button>
+                        <button type="button" class="btn btn-outline-secondary btn_page">2</button>
+                        <button type="button" class="btn btn-outline-secondary btn_page">3</button>
+                        <button type="button" class="btn btn-outline-secondary btn_page">4</button>
+                        <button type="button" class="btn btn-outline-secondary btn_page">5</button>
+                        <button type="button" class="btn btn-outline-secondary btn_page" style="border: 0;">></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </main>
+    <script>
+
+    </script>
+ <!--footer-->
+ <footer>
+    <div class="footer-div">
+        <div class="footer1">
+            <p><strong>Koction</strong>
+                <br>서울특별시 강남구 강남대로 94길 20<br>
+                상호명 : (주) 콕션<br>
+                대표자 : 고기천<br>
+            </p>
+        </div>
+        <div class="footer2">
+            <div>
+                <p><strong>고객센터</strong>
+                    <br>Tel: 1688-5757 ( 평일 09:00 ~ 18:00 )<br>
+                    이메일: koction@koction.kr<br>
+                FAX: 1688-5758</p>
+            </div>
+        </div>
+    </div>
+    <div class="footer3">
+        <p>
+            (주)콕션은 통신판매중개자이며 통신판매의 당사자가 아닙니다. 따라서 (주)콕션은 상품거래정보 및 가격에 대하여 책임을 지지 않습니다.
+            <br>
+            본사이트의 모든 정보, 콘텐츠, UI 등에 대한 무단 복제, 전송, 배포, 스크래핑 등의 행위는 관련 법령에 의하여 엄격히 금지됩니다.
+        </p>
+        <span><small>&copy; 2022 Koction</small></span>
+    </div>
+</footer>
+
+</body>
+
+</html>

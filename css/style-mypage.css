@@ -1,50 +1,86 @@
 @charset "UTF-8";
-.box {
-    width: 1100px;
-    margin-top: 100px;
-    border-bottom: 2px solid rgba(68, 51, 34, .3);
-}
-h1 {
-    margin-left: 50px;
-}
 
+main>div>.title{
+    margin-top: 30px;
+    color: rgb(57, 57, 57);
+    text-align: center;   
+    font-size: 35px;
+}
 .box2 {
-    width: 1100px;
+    width: 100%;
     margin-top: 50px;
 }
-
-.box2 p {
-    margin-left: 100px;
+.container .col{
+    padding: 8px 0;
+    font-size:30px;
 }
 
-h2,h3,h4, h6 {
-    margin-left: 100px;
-}
 
-h4{
-    margin-left: 140px;
+main article{
+    position: relative;
+    width: 95%;
+    margin: 30px auto 50px;
+    background-color: rgb(251, 251, 251);
+    border: 2px solid rgb(235, 235, 235);
+    border-radius: 10px;
 }
-
+h3 {
+    margin-left: 5%;
+    margin-right: 5%;
+    /* margin-right: 5%; */
+}
 .container {
-    margin-left: 50px;
+    width: 100%;
+    margin-left: 20%; 
+    margin-right: 20%;
+    margin-bottom: 3%; 
+}
+.mypage-info {
+    margin-top: 30px;
+    width: 80%;
+}
+.buy-box {
+    margin-right: 10%;
+    margin-left: 10%;
+    margin-bottom: 3%;
+    margin-top: 3%;
 }
 
-.test {
-    margin-top: 30px;
-    width: 800px;
+.sell-box {
+    margin-right: 10%;
+    margin-left: 10%;
+    margin-bottom: 3%;
+    margin-top: 3%;
 }
 
 h3 {
     border-bottom: 1px solid rgba(68, 51, 34, .3);
-    width: 1000px;
+    width: 90%;
     margin-bottom: 20px;
 }
 
 table {
     border-top: 1px solid #111 !important;
 }
-
+.btn {
+    border-radius: 10px;
+    background-color: #FFFFFF;
+    border: 0.5px solid rgba(57, 57, 57,0.5);
+}
 .btn:hover, .btn:focus {
     font-weight:bold;
     color: rgb(18, 100, 100);
+}
+#btn_bid{
+    border-radius: 10px;
+    background-color: #FFFFFF;
+    border: 0.5px solid rgba(57, 57, 57,0.5);
+}
+#btn_bid:hover, #btn_bid:focus {
+    font-weight:bold;
+    color: rgb(18, 100, 100);
+}
+
+img {
+    border-radius: 10px;
 }

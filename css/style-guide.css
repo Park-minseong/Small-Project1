@@ -4,7 +4,6 @@ a {
 }
 body {
     font-family: "나눔고딕", NanumGothic, "맑은고딕", MalgunGothic, "Apple SD Gothic Neo", sans-serif;
-    line-height: 1.9;
     color: #432;
 }
 main>.title{
@@ -16,43 +15,18 @@ main>.title{
 main article{
     position: relative;
     width: 95%;
-    margin: 20px auto 50px;
+    margin: 30px auto 50px;
     background-color: rgb(251, 251, 251);
     border: 2px solid rgb(235, 235, 235);
     border-radius: 10px;
-    padding-top: 50px;
 }
-/* main .box1, .box2, .box3, .box4, .box5{
-    margin: 30px auto 0px;
-    width: 300px;
-} */
 
-.justify-content-end {
-    /* float: right; */
+
+.box1,.box2,.box3,.box4,.box5, .koction-grade{
+    margin-top: 50px;
 }
-#home{
-    position: relative;
-    background: #FFFFFF;
-    /* width: 1200px; */
-    height: 1717px;
-    /* margin: 0 auto; */
-}
-main {
-    /* width: 1200px; */
-    /* margin-left: 80px; */
-}
-main div {
+.koction-grade{
     margin-bottom: 50px;
-    /* line-height: 1.5; */
-}
-.box {
-    width: 95%;
-    margin-top: 100px;
-}
-
-
-main>article>div {
-    width:100%;
 }
 
 /* h2,h3,h4,h5, h6 {
@@ -60,7 +34,8 @@ main>article>div {
 } */
 
 h2,h3,h4, h6 {
-    margin-left: 8%;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
 h4,h5{
@@ -74,13 +49,10 @@ table {
     margin-bottom: 20px;
 }
 
-h2 {
-    border-bottom: 1px solid rgba(68, 51, 34, .3);
-    width: 62%;
-}
 h3 {
     border-bottom: 1px solid rgba(68, 51, 34, .3);
-    width: 85%
+    width: 90%;
+    margin-bottom: 20px;
 }
 
 .box {
@@ -94,18 +66,18 @@ h3 {
 /* .koction-grade img {
     margin: 0px 0px;
 } */
-#vip {
-    margin-left: 9%;
+/* #vip {
+    margin-left: 8.8%;
 }
 #gold {
-    margin-left: 0.5%;
+    margin-left: 0%;
 }
 #silver {
-    /* margin-left: 5%; */
+    margin-left: -0.75%;
 }
 #normal {
-    margin-left: 14%;
-}
+    margin-left: 13%;
+} */
 
 table {
     margin-top: 30px;
@@ -121,6 +93,15 @@ table th{
 table td {
     border-bottom: 1px solid #ddd;
 }
+
+#koction-grade-table {
+    width: 60%;
+   
+}
+
+/* #koction-grade-table td {
+    border-bottom: 1px solid #ddd;
+} */
 
 /*마이페이지 footer*/
 

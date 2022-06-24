@@ -55,6 +55,18 @@
             })
         },1000);
         });
+
+       
+        function logoutMethod(){
+            topStatus = 1;
+            showlogin();
+        }
+        //상단 메뉴 로그인/로그아웃 표시
+        function showlogin(){
+        var viewTop = $('.topStatus');
+            viewTop.eq(topStatus).hide(0,function(){});
+            console.log(viewTop);
+        }
         
     </script>
 </head>
@@ -63,9 +75,10 @@
 <header>
     <div class="top-bg">
         <div class="top-navbar">
+            
             <div class="nav justify-content-end topStatus">
-                <a class="nav-link" href="#">로그인</a>
-                <a class="nav-link" href="#">회원가입</a>
+                <a class="nav-link" href="#" disabled>admin님 환영합니다.</a>
+                <a class="nav-link" href="index.html">로그아웃</a>
             </div>
         </div>
 
